@@ -1,8 +1,8 @@
 version: 2.0
 jobs:
   merge:
-    - checkout
     steps:
+      - checkout
       - run:
         name: Merge
           command: echo "merge it"
