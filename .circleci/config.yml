@@ -8,8 +8,15 @@ jobs:
     - run:
         name: Gradle test
         command: gradle test
+        command: ls -la build/
+        command: ls -la build/test-reports
+        command: ls -la build/test
+    - store_test_results:
+        path: build/
     - store_test_results:
         path: build/test-reports
+    - store_test_results:
+        path: build/test-reports/test
     - run:
         name: Gradle jar
         command: gradle jar
