@@ -31,6 +31,15 @@ jobs:
     - store_artifacts:
         path: build/libs
         destination: jar
+  deploy:
+    docker:
+    - image: circleci/openjdk:8-jdk
+    steps:
+    - checkout
+    - run:
+        name: Deploy
+        command: |
+          echo deploy
 
 
 workflows:
@@ -44,3 +53,7 @@ workflows:
       - build:
           requires:
             - merge
+      - deploy:
+          requires:
+            - build
+            - unittest
