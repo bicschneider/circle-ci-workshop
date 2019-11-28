@@ -9,15 +9,8 @@ jobs:
         name: Gradle test
         command: |
           gradle test
-          ls -la build/
-          ls -la build/test-results
-          ls -la build/test
-    - store_test_results:
-        path: build/
     - store_test_results:
         path: build/test-results
-    - store_test_results:
-        path: build/test-reports/test
     - run:
         name: Gradle jar
         command: gradle jar
