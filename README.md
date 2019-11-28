@@ -139,6 +139,9 @@ To store test results in CircleCI use the following syntax:
 CircleCI supports a few different test report formats.
 https://circleci.com/docs/2.0/configuration-reference/#store_test_results
 
+### Tasks
+- Add the store test results in the pipeline
+
 Hint: The results of running `gradle test` are stored in a local directory: `build/test-results`.
 
 If all works as intended, you should see something like ![test results screenshot](img/test-results.png).
@@ -172,7 +175,9 @@ Up until now, we have had a job called `build` for the `gradle test`, but that i
 
 ### Tasks
 
-1. Add another `run` step to your `build` job that runs `gradle jar`, then add a step that stores the artifact it produces.
+1. Add another `run` step to your `build` job that runs `gradle jar`,
+2. Add a step that stores the artifact it produces.
+3. Push the changes to GitHub
 
 > Hint: The results of running `gradle jar` are actually stored in a local directory: `build/libs`
 
