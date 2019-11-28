@@ -39,6 +39,6 @@ workflows:
     jobs:
       - merge
       - unittest:
-        requires:
-          - merge
+          requires:
+            - merge
       - build
