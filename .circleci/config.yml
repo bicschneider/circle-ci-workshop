@@ -23,3 +23,9 @@ jobs:
         path: build/libs
         destination: jar
 
+workflows:
+  version: 2
+  unittest-build:
+    jobs:
+    - unit-test:
+    - build:
