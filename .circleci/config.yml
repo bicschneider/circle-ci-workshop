@@ -8,3 +8,6 @@ jobs:
     - run:
         name: Gradle test
         command: gradle test
+    - run:
+        name: Gradle jar
+        command: gradle jar
