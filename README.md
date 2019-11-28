@@ -88,7 +88,7 @@ This is the delivery pipeline
 
 Up until now, we have only made sure that CircleCI can reach the configuration file, but not really made it do anything useful related to our actual code.
 
-As a next step, we want CircleCI to actually clone our project, build the code and run the tests.
+As a next step, we want CircleCI to actually clone our project to the build workspace, build the code and run the tests.
 
 ### Tasks
 
