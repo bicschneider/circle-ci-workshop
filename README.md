@@ -73,7 +73,7 @@ The CircleCI config syntax is very straight forward. The trickiest part is typic
 
 * Paste the example into `.circleci/config.yml`. Commit the file and push it to GitHub. Then go back to the CircleCI page and click **Start building** in the CI dashboard.
 
-You should see something like this in the logs of CircleCI: (Note: The logs can be a bit hard to the first time :-), but give it a shot)
+You should see something like this in the logs of CircleCI: (Note: The logs can be a bit hard to find the first time :-), but give it a shot)
 
 ```bash
 #!/bin/sh -eo pipefail
