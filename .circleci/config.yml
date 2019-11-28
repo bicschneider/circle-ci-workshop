@@ -7,10 +7,11 @@ jobs:
     - checkout
     - run:
         name: Gradle test
-        command: gradle test
-        command: ls -la build/
-        command: ls -la build/test-reports
-        command: ls -la build/test
+        command: |
+          gradle test
+          ls -la build/
+          ls -la build/test-reports
+          ls -la build/test
     - store_test_results:
         path: build/
     - store_test_results:
