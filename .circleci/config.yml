@@ -1,5 +1,8 @@
 version: 2.0
 jobs:
+  merge:
+    - checkout
+    - run: echo "merge it"
   unittest:
     docker:
     - image: circleci/openjdk:8-jdk
@@ -27,5 +30,14 @@ workflows:
   version: 2
   unittest-build:
     jobs:
+    - merge
     - unittest
+      requires:
+        - merge
     - build
+      requires:
+      - merge
+    - deploy
+      requires:
+      - build
+      - unittest
