@@ -10,12 +10,12 @@ jobs:
         command: |
           gradle test
           ls -la build/
-          ls -la build/test-reports
+          ls -la build/test-results
           ls -la build/test
     - store_test_results:
         path: build/
     - store_test_results:
-        path: build/test-reports
+        path: build/test-results
     - store_test_results:
         path: build/test-reports/test
     - run:
