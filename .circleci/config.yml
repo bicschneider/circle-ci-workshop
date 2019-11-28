@@ -36,14 +36,14 @@ workflows:
   version: 2
   unittest-build:
     jobs:
-    - merge
-    - unittest:
-      requires:
-        - merge
-    - build:
-      requires:
       - merge
-    - deploy:
-      requires:
-      - build
-      - unittest
+      - unittest:
+        requires:
+          - merge
+      - build:
+        requires:
+          - merge
+      - deploy:
+        requires:
+          - build
+          - unittest
