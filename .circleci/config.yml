@@ -41,6 +41,6 @@ workflows:
       - unittest:
           requires:
             - merge
-      - build
+      - build:
           requires:
             - merge
