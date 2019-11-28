@@ -31,13 +31,13 @@ workflows:
   unittest-build:
     jobs:
     - merge
-    - unittest
+    - unittest:
       requires:
         - merge
-    - build
+    - build:
       requires:
       - merge
-    - deploy
+    - deploy:
       requires:
       - build
       - unittest
